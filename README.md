@@ -1,4 +1,8 @@
 # Drive-Download-Generator
+
+This script generates a direct download link for a file present on Google Drive. <br>
+Just enter the publicly accessible Drive URL and the download link would be generated automatically!
+
 To run the script,
 
 ```
