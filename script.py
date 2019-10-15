@@ -10,7 +10,15 @@ else:
 baselink = "https://drive.google.com/uc?export=download&id="
 new = link.split('/')[5]
 new = baselink+new
-print("New link:",new)
+print("Download link:",new)
+
+try:
+    import pyperclip
+    pyperclip.copy(new)
+    print('Download link copied to clipboard!')
+except ModuleNotFoundError as e:
+    print('It seems you have not installed Pyperclip so copying download link to clipboard failed.')
+    print('To directly copy download link to clipboard after running the script, install pyperclip by "pip install pyperclip"')
 
 if len(sys.argv) > 2 and sys.argv[-1] == '--download':
     print("Downloading the file....", end="")
